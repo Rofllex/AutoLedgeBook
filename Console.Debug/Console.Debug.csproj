@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <AssemblyName>AutoLedgeBook.ConsoleDebug</AssemblyName>
+    <RootNamespace>AutoLedgeBook.ConsoleDebug</RootNamespace>
+    <ApplicationIcon />
+    <StartupObject />
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>8</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoLedgeBook.Data.Abstractions\AutoLedgeBook.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\AutoLedgeBook.Data.CanteenBook\AutoLedgeBook.Data.CanteenBook.csproj" />
+    <ProjectReference Include="..\AutoLedgeBook.Data.StorageBook\AutoLedgeBook.Data.StorageBook.csproj" />
+    <ProjectReference Include="..\AutoLedgeBook.Data\AutoLedgeBook.Data.csproj" />
+    <ProjectReference Include="..\AutoLedgeBook.License\AutoLedgeBook.License.csproj" />
+    <ProjectReference Include="..\AutoLEdgeBook.Utils\AutoLedgeBook.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
